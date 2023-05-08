@@ -3,8 +3,11 @@ Typestaceans - Rust's Web Assembly Concepts for TypeScript Developers (It doesn'
 
 How you can get to speed with WASM as fast as possible as a TypeScript Developer.
 
+# Index
+1. [Logging](#logging)
+2. [Real World Example]
 
-## Logging in WASM
+## <a name="logging"> Logging in WASM
 How to Log in Web Assembly:
 Yew version (Using Gloo, and wasm_bindgen)
 ```
@@ -53,6 +56,11 @@ function MyComponent() {
 }
 ```
 
+
+## Real World Example
+[OMAR is an Online MAnga Reader written in Yew and WASM](https://github.com/superjose/omar-online-manga-reader). 
+
+It's open source and with the MIT license.
 
 
 ### Follow me for more:
