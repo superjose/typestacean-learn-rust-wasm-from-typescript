@@ -7,6 +7,6 @@ enum ChangedBy {
 
 function MyComponent() {
     const navigation = ChangedBy.Navigation;
-    console.log("Navigation is ${navigation}")
+    console.log(`Navigation is ${navigation}`)
     return <p>Hello World</p>
 }
