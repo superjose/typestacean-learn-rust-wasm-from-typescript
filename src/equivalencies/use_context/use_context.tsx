@@ -9,7 +9,7 @@ import React, {
 // const defaultMangaOptionsState = {...};
 // const mangaOptionsReducer = (state, action) => {...};
 
-const MangaOptionsContext = createContext();
+const MangaOptionsContext = createContext{(});
 
 type MangaOptionsContextType = {
   children: React.ReactNode;
