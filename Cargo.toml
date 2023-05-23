@@ -7,4 +7,5 @@ edition = "2021"
 
 [dependencies]
 yew = { version = "0.20.0", features = ["csr"] }
+yew-hooks = "0.2.0"
 yew-router = "0.17.0"

@@ -5,6 +5,6 @@ export const routes = Object.freeze({
     conditionalRendering: "/equivalencies/conditional-rendering",
     logging: "/equivalencies/logging",
     onClick: "/equivalencies/on-click",
-    useContext: "/equivalencies/use-context",
+    useReducer: "/equivalencies/use-reducer",
   },
 });

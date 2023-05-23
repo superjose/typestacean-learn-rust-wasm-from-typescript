@@ -34,9 +34,9 @@ impl TypographyVariants {
 #[derive(PartialEq, Properties)]
 pub struct TypographyProps {
     #[prop_or_default()]
-    variant: TypographyVariants,
+    pub variant: TypographyVariants,
     #[prop_or_default()]
-    children: Children,
+    pub children: Children,
 }
 
 #[function_component(Typography)]

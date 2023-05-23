@@ -1,14 +1,11 @@
 import type { FunctionComponent } from "react";
-import { Routes, Route, Outlet } from "react-router-dom";
-import { ConditionalRendering } from "./conditional_rendering/conditional_rendering";
-import { Logging } from "./logging/log";
+import { Outlet } from "react-router-dom";
 import { GridMenu } from "../components/GridMenu";
 import { routes } from "../utils/routes";
-import { OnClick } from "./onclick/onclick";
 
 export type EquivalenciesProps = {};
 
-export const Equivalencies: FunctionComponent<EquivalenciesProps> = (props) => {
+export const Equivalencies: FunctionComponent<EquivalenciesProps> = () => {
   return (
     <>
       <GridMenu
@@ -26,8 +23,8 @@ export const Equivalencies: FunctionComponent<EquivalenciesProps> = (props) => {
             href: routes.equivalencies.onClick,
           },
           {
-            text: "useContext",
-            href: routes.equivalencies.useContext,
+            text: "useReducer",
+            href: routes.equivalencies.useReducer,
           },
         ]}
       />
