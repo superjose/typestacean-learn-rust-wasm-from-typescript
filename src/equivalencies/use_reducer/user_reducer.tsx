@@ -1,6 +1,6 @@
 import { useReducer, type FunctionComponent } from "react";
 import { Typography } from "../../components";
-import { Button } from "../../components/Button";
+import { Button } from "../../components/button";
 
 type State = {
   value: number;

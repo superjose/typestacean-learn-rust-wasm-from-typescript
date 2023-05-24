@@ -1,39 +1,18 @@
+use crate::equivalencies::equivalencies::Equivalencies;
+use crate::home::home::Home;
+use crate::utils::routes::Route;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
 mod components;
+mod equivalencies;
 mod home;
-
-#[derive(Clone, Routable, PartialEq)]
-enum Route {
-    #[at("/")]
-    Home,
-    #[at("/secure")]
-    Secure,
-    #[not_found]
-    #[at("/404")]
-    NotFound,
-}
-
-#[function_component(Secure)]
-fn secure() -> Html {
-    let navigator = use_navigator().unwrap();
-
-    let onclick = Callback::from(move |_| navigator.push(&Route::Home));
-    html! {
-        <div>
-            <h1>{ "Secure" }</h1>
-            <button {onclick}>{ "Go Home" }</button>
-        </div>
-    }
-}
+mod utils;
 
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => html! { <h1>{ "Home 🤗" }</h1> },
-        Route::Secure => html! {
-            <Secure />
-        },
+        Route::Home => html! {<Home />},
+        Route::Equivalencies => html! { <Equivalencies /> },
         Route::NotFound => html! { <h1>{ "404" }</h1> },
     }
 }

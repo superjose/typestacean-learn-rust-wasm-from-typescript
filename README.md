@@ -9,3 +9,4 @@ This contains a dual runnable project which allows you to see React and Yew code
 ## Notes:
 * Do not use this project structure as example for your Rust WASM or TypeScript project. 
 * Trunk will get into an infinite loop if you have `trunk serve` running while editing `.ts` and `.tsx` files.
+* Folders are lowercase because rust's built-in linter warns if it doesn't follow the snake case convention. 

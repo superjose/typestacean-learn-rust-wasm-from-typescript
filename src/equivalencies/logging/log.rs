@@ -1,5 +1,6 @@
 use gloo::console::log;
 use wasm_bindgen::JsValue;
+use yew::prelude::*;
 
 #[derive(Debug, PartialEq, Eq, Clone)]
 pub enum ChangedBy {
@@ -16,12 +17,12 @@ impl From<ChangedBy> for JsValue {
     }
 }
 
-#[function_component(MyComponent)]
-fn my_component() -> Html {
+#[function_component(LogComponent)]
+pub fn log_component() -> Html {
     let changed_by = ChangedBy::Navigation;
     // Then you can, in your component:
-    log!("Navigation is {}", changed_by);
+    log!("Hello TypeStacean {}!", changed_by);
     html! {
-        <p>Hello world</p>
+        <p>{"Hello world"}</p>
     }
 }

@@ -1,12 +1,19 @@
 use yew::prelude::*;
 use yew_hooks::prelude::use_location;
+use yew_router::{prelude::Link, Routable};
 
-use crate::components::GridItem::grid_item::GridItem;
+use crate::{components::grid_item::grid_item::GridItem, utils::routes::Route};
+
+impl Route {
+    fn is_active(&self, pathname: String) -> bool {
+        self.to_path() == pathname
+    }
+}
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Item {
     pub text: String,
-    pub href: String,
+    pub route: Route,
 }
 
 #[derive(Properties, Clone, PartialEq)]
@@ -21,11 +28,11 @@ pub fn grid_menu(props: &GridMenuProps) -> Html {
         <div className="grid grid-cols-1 md:grid-cols-3">
             {props.items.iter().map(|item| {
                 html! {
-                    <a href={item.href}>
-                        <GridItem key={item.text} active={item.href == &location.pathname}>
-                            {item.text}
+                    <Link<Route> to={item.route.clone()}>
+                        <GridItem key={item.text.clone()} active={item.route.is_active(location.pathname.clone())}>
+                            {&item.text}
                         </GridItem>
-                    </a>
+                    </Link<Route>>
                 }
             }).collect::<Html>()}
     </div>

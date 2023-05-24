@@ -1,8 +1,11 @@
 use yew::prelude::*;
 
-use crate::components::{
-    GridMenu::grid_menu::{GridMenu, Item},
-    Typography::typography::{Typography, TypographyVariants},
+use crate::{
+    components::{
+        grid_menu::grid_menu::{GridMenu, Item},
+        typography::typography::{Typography, TypographyVariants},
+    },
+    utils::routes::Route,
 };
 
 #[function_component(Home)]
@@ -15,8 +18,8 @@ pub fn home() -> Html {
         <GridMenu
             items={
                 vec!(Item {
-                    text: "Conditional Rendering".to_string(),
-                    href: "/conditional-rendering".to_string(),
+                    text: "Equivalencies".to_string(),
+                    route: Route::Equivalencies,
                 })
             }
             />

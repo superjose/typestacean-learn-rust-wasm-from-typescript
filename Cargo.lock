@@ -690,6 +690,9 @@ dependencies = [
 name = "typestacean-learn-rust-wasm-from-typescript"
 version = "0.1.0"
 dependencies = [
+ "gloo",
+ "wasm-bindgen",
+ "web-sys",
  "yew",
  "yew-hooks",
  "yew-router",

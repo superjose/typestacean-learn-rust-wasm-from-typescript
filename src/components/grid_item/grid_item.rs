@@ -10,6 +10,7 @@ pub struct GridItemProps {
 #[function_component(GridItem)]
 pub fn grid_item(props: &GridItemProps) -> Html {
     let active = if props.active { "bg-purple-500" } else { "" };
+
     html! {
         <div
           class={
