@@ -1,5 +1,5 @@
 import type { FunctionComponent } from "react";
-import { GridItem } from "../GridItem";
+import { GridItem } from "../grid_item/grid_item";
 import { Link, useLocation } from "react-router-dom";
 
 type Item = {

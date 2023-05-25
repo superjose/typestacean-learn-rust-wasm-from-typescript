@@ -8,7 +8,6 @@ use crate::equivalencies::conditional_rendering::conditional_rendering::{
 };
 use crate::equivalencies::logging::log::LogComponent;
 use crate::equivalencies::onclick::onclick::OnClickComponent;
-use crate::utils::routes::Route;
 
 use super::use_reducer::user_reducer::UseReducerComponent;
 
@@ -16,6 +15,8 @@ use super::use_reducer::user_reducer::UseReducerComponent;
 enum EquivalenciesRoute {
     #[at("/equivalencies/conditional_rendering")]
     ConditionalRendering,
+    #[at("/equivalencies/conditional_rendering")]
+    ConditionalRenderingVariant2,
     #[at("/equivalencies/logging")]
     Logging,
     #[at("/equivalencies/onclick")]
@@ -28,6 +29,9 @@ fn switch(routes: EquivalenciesRoute) -> Html {
     match routes {
         EquivalenciesRoute::ConditionalRendering => {
             html! { <ConditionalRendering variant={ConditionalVariant::Primary} /> }
+        }
+        EquivalenciesRoute::ConditionalRenderingVariant2 => {
+            html! { <ConditionalRendering variant={ConditionalVariant::Secondary} /> }
         }
         EquivalenciesRoute::Logging => html! { <LogComponent /> },
         EquivalenciesRoute::OnClick => html! { <OnClickComponent /> },
@@ -50,6 +54,10 @@ pub fn equivalencies() -> Html {
                         Item {
                         text: "Conditional Rendering".to_string(),
                         route: EquivalenciesRoute::ConditionalRendering,
+                    },
+                        Item {
+                        text: "Conditional Rendering Variant 2".to_string(),
+                        route: EquivalenciesRoute::ConditionalRenderingVariant2,
                     },
                         Item {
                         text: "Logging".to_string(),

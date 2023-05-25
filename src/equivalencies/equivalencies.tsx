@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "react";
 import { Outlet } from "react-router-dom";
-import { GridMenu } from "../components/grid_menu";
+import { GridMenu } from "../components/grid_menu/grid_menu";
 import { routes } from "../utils/routes";
 
 export type EquivalenciesProps = {};

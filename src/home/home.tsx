@@ -1,5 +1,5 @@
 import type { FunctionComponent } from "react";
-import { GridMenu } from "../components/GridMenu";
+import { GridMenu } from "../components/grid_menu/grid_menu";
 import { routes } from "../utils/routes";
 import { Typography } from "../components";
 

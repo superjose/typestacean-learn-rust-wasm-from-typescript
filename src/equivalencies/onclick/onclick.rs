@@ -1,3 +1,4 @@
+use crate::components::typography::typography::{Typography, TypographyVariants};
 use yew::prelude::*;
 
 #[function_component(OnClickComponent)]
@@ -11,10 +12,10 @@ pub fn on_click_component() -> Html {
     html! {
         <>
             <button {onclick}>{"Increase Counter"}</button>
-            <p>
+            <Typography variant={TypographyVariants::P}>
                 <b>{ "Current value: " }</b>
                     { *counter }
-            </p>
+            </Typography>
         </>
     }
 }
