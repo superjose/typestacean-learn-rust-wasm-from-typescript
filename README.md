@@ -13,16 +13,19 @@ This contains a dual-runnable project which allows you to see React and Yew code
 This project is fully bootable and can be accessed by running:
 ### React:
 1. Install [pnpm](https://pnpm.io/installation). 
-2. Run pnpm install.
-3. Run pnpm dev (To Launch the dev server)
+2. Run `pnpm install`.
+3. Run `pnpm dev` (To Launch the dev server)
+4. Run `pnpm tailwind` (To launch Tailwind)
 
 ### Rust - Yew
-1. Install [trunk](https://trunkrs.dev/)
+1. Install [rust](https://www.rust-lang.org/)
+2. Install [trunk](https://trunkrs.dev/)
 ```sh
 cargo install trunk
 ```
-2. Run `trunk serve`.
-3. Visit `http://localhost:8080`
+3. Run `trunk serve`.
+4. Visit `http://localhost:8080`
+5. Run `pnpm tailwind` (To launch Tailwind)
 
 You will now be able to see the same project running in both React and Yew.
 
