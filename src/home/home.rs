@@ -16,6 +16,7 @@ pub fn home() -> Html {
             { "Home 🤗" }
         </Typography>
         <GridMenu
+            <Route>
             items={
                 vec!(Item {
                     text: "Equivalencies".to_string(),
