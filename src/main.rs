@@ -12,7 +12,7 @@ mod utils;
 fn switch(routes: Route) -> Html {
     match routes {
         Route::Home => html! {<Home />},
-        Route::Equivalencies => html! { <Equivalencies /> },
+        Route::Equivalencies | Route::EquivalenciesRoot => html! { <Equivalencies /> },
         Route::NotFound => html! { <h1>{ "404" }</h1> },
     }
 }

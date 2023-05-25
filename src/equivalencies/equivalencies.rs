@@ -14,13 +14,13 @@ use super::use_reducer::user_reducer::UseReducerComponent;
 
 #[derive(Clone, Routable, PartialEq)]
 enum EquivalenciesRoute {
-    #[at("/conditional_rendering")]
+    #[at("/equivalencies/conditional_rendering")]
     ConditionalRendering,
-    #[at("/logging")]
+    #[at("/equivalencies/logging")]
     Logging,
-    #[at("/onclick")]
+    #[at("/equivalencies/onclick")]
     OnClick,
-    #[at("/use-reducer")]
+    #[at("/equivalencies/use-reducer")]
     UseReducer,
 }
 
@@ -44,12 +44,27 @@ pub fn equivalencies() -> Html {
                 { "Equivalencies" }
             </Typography>
              <GridMenu
-                <Route>
+                <EquivalenciesRoute>
                 items={
-                    vec!(Item {
-                        text: "Equivalencies".to_string(),
-                        route: Route::Equivalencies,
-                    })
+                    vec!(
+                        Item {
+                        text: "Conditional Rendering".to_string(),
+                        route: EquivalenciesRoute::ConditionalRendering,
+                    },
+                        Item {
+                        text: "Logging".to_string(),
+                        route: EquivalenciesRoute::Logging,
+                    },
+                        Item {
+                        text: "Conditional Rendering".to_string(),
+                        route: EquivalenciesRoute::OnClick,
+                    },
+                        Item {
+                        text: "Conditional Rendering".to_string(),
+                        route: EquivalenciesRoute::UseReducer,
+                    },
+
+                )
                 }
             />
         </div>

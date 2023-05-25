@@ -3,9 +3,11 @@ use yew_router::prelude::*;
 pub enum Route {
     #[at("/")]
     Home,
-    #[at("/equivalencies")]
-    Equivalencies,
     #[not_found]
     #[at("/404")]
     NotFound,
+    #[at("/equivalencies")]
+    EquivalenciesRoot,
+    #[at("/equivalencies/*")]
+    Equivalencies,
 }

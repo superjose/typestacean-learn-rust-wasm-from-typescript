@@ -41,7 +41,7 @@ where
         <div className="grid grid-cols-1 md:grid-cols-3">
             {props.items.iter().map(|item| {
                 html! {
-                    <Link<R> to={item.route.clone()}>
+                    <Link<R> to={item.route.clone()} >
                         <GridItem key={item.text.clone()} active={item.is_active(location.pathname.clone())}>
                             {&item.text}
                         </GridItem>
