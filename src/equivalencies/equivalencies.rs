@@ -13,9 +13,9 @@ use super::use_reducer::user_reducer::UseReducerComponent;
 
 #[derive(Clone, Routable, PartialEq)]
 enum EquivalenciesRoute {
-    #[at("/equivalencies/conditional_rendering")]
+    #[at("/equivalencies/conditional-rendering")]
     ConditionalRendering,
-    #[at("/equivalencies/conditional_rendering")]
+    #[at("/equivalencies/conditional-rendering-variant-2")]
     ConditionalRenderingVariant2,
     #[at("/equivalencies/logging")]
     Logging,

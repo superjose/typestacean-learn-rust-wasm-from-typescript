@@ -21,7 +21,12 @@ pub fn home() -> Html {
                 vec!(Item {
                     text: "Equivalencies".to_string(),
                     route: Route::Equivalencies,
-                })
+                },
+                Item {
+                    text: "Window Apis".to_string(),
+                    route: Route::WindowApis,
+                }
+            )
             }
             />
         </>

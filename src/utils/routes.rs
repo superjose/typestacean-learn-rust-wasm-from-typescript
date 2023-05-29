@@ -10,4 +10,8 @@ pub enum Route {
     EquivalenciesRoot,
     #[at("/equivalencies/*")]
     Equivalencies,
+    #[at("/window")]
+    WindowApisRoot,
+    #[at("/window/*")]
+    WindowApis,
 }
