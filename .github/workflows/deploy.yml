@@ -1,7 +1,7 @@
 # This GitHub actions was inspired from
 # https://www.reddit.com/r/rust/comments/10eiysf/comment/j4rmeum/?utm_source=share&utm_medium=web2x&context=3
 
-name: CD - Deploy OMAR
+name: CD - Deploy WASM to GitHub Pages
 
 # Controls when the workflow will run
 on:
