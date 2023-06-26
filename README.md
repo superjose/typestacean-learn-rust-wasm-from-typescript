@@ -39,3 +39,70 @@ Everything is inside the source folder. Things may get funny if you try running 
 
 ## Feedback is appreciated.
 If you've seen there's a piece of code that we can improve, by all means!
+
+
+# Index.
+
+## Equivalencies
+How would you do something in React TypeScript vs Yew Rust.
+
+1. Conditional Rendering: 
+```tsx
+import type { FunctionComponent } from "react";
+
+export type ConditionalRenderingProps = {
+  variant: "primary" | "secondary";
+};
+
+export const ConditionalRendering: FunctionComponent<
+  ConditionalRenderingProps
+> = (props) => {
+  return (
+    <>
+      {props.variant === "primary" && <p>Primary</p>}
+      {props.variant === "secondary" && <p>Secondary</p>}
+    </>
+  );
+};
+```
+```rust
+use yew::prelude::*;
+
+#[derive(Clone, PartialEq)]
+pub enum ConditionalVariant {
+    Primary,
+    Secondary,
+}
+
+#[derive(Properties, Clone, PartialEq)]
+pub struct ConditionalRenderingProps {
+    pub variant: ConditionalVariant,
+}
+
+#[function_component(ConditionalRendering)]
+pub fn conditional_rendering(props: &ConditionalRenderingProps) -> Html {
+    let variant = &props.variant;
+    html! {
+        <div>
+            {
+                match variant {
+                    ConditionalVariant::Primary => html! {
+                        <p>{"Primary"}</p>
+                    },
+                    ConditionalVariant::Secondary => html! {
+                        <p>{"Secondary"}</p>
+                    },
+                }
+            }
+
+
+        </div>
+    }
+}
+
+```
+
+### Rust - TypeScript syntax
+```rust
+
+```

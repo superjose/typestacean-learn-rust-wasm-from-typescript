@@ -5,7 +5,6 @@ use yew_router::{prelude::Link, Routable};
 use crate::components::grid_item::grid_item::GridItem;
 
 #[derive(Clone, PartialEq, Properties)]
-
 pub struct Item<R>
 where
     R: Routable,

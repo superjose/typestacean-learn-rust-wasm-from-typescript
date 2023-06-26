@@ -8,6 +8,7 @@ use yew_router::prelude::*;
 mod components;
 mod equivalencies;
 mod home;
+mod other;
 mod utils;
 mod window_apis;
 
@@ -21,12 +22,16 @@ fn switch(routes: Route) -> Html {
 }
 
 #[function_component(App)]
-fn app() -> Html {
+fn dioxus_app() -> Html {
     html! {
         <BrowserRouter>
             <Switch<Route> render={switch} /> // <- must be child of <BrowserRouter>
         </BrowserRouter>
     }
+}
+
+fn dioxus_app() {
+
 }
 
 fn main() {
