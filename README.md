@@ -23,9 +23,33 @@ This project is fully bootable and can be accessed by running:
 ```sh
 cargo install trunk
 ```
-3. Run `trunk serve`.
-4. Visit `http://localhost:8080`
-5. Run `pnpm tailwind` (To launch Tailwind)
+3. Install [bonnie](https://github.com/arctic-hen7/bonnie)
+```sh
+cargo install bonnie
+```
+4. Run `trunk serve`.
+5. Visit `http://localhost:8080`
+6. Run `pnpm tailwind` (To launch Tailwind)
+
+### Rust - Dioxus 
+1. Install [rust](https://www.rust-lang.org/)
+2. Install [bonnie](https://github.com/arctic-hen7/bonnie)
+```sh
+cargo install bonnie
+```
+3. Install [dioxus cli](https://dioxuslabs.com/docs/0.3/guide/en/getting_started/web.html)
+```sh
+cargo install dioxus-cli
+```
+4. Add `wasm32-unknown-unknown`:
+```sh
+rustup target add wasm32-unknown-unknown
+```
+5. Add Dioxus 
+```sh
+cargo add dioxus dioxus-web
+```
+
 
 You will now be able to see the same project running in both React and Yew.
 
