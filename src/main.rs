@@ -2,7 +2,7 @@ use crate::equivalencies::equivalencies::Equivalencies;
 use crate::home::home::Home;
 use crate::utils::routes::Route;
 use dioxus::prelude::*;
-use leptos::{mount_to_body, view};
+use leptos::{mount_to_body, view, IntoView};
 use std::str::FromStr;
 use wasm_framework::WasmFramework;
 use window_apis::window_apis::WindowApis;
@@ -17,6 +17,7 @@ mod other;
 mod utils;
 mod wasm_framework;
 mod window_apis;
+use home::leptos_home::Home;
 
 fn switch(routes: Route) -> Html {
     match routes {
@@ -46,7 +47,7 @@ fn dioxus_app(cx: Scope) -> Element {
 }
 
 fn leptos_app() {
-    mount_to_body(|cx| view! { cx,  <p>"Hello, world!"</p> })
+    mount_to_body(|cx| view! { cx,  <Home /> })
 }
 
 fn main() {
